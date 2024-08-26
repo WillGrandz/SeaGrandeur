@@ -1,0 +1,262 @@
+/*-------------------------BASBLOCK---------------------------*/
+/* Reset CSS-regler */
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, img, input, textarea, button, .searchbar__icon {margin: 0; padding: 0;}
+a {text-decoration: none; color: inherit;}
+input, textarea, button {background: none;border: none;}
+.searchbar__icon {background-color: #112d4d; color: white; border-radius: 2px;}
+/* @font-face */
+@font-face {
+	font-family: myFont;
+	src: url(fonts/Avalon-Medium-webfont.woff2) format('woff2'), url(fonts/Avalon-Medium-webfont.woff) format('woff');
+
+}
+@font-face {
+	font-family: headingFont;
+	src: url(fonts/passageway.woff2) format('woff2'), url(fonts/passageway.woff) format('woff');
+}
+@font-face {
+    font-family: buttonmediaFont;
+    src: url(fonts/roadgeek-2005-series-6b.woff2) format('woff2'), url(fonts/roadgeek-2005-series-6b.woff) format('woff');
+}
+/* Mina egna stilregler */
+* {box-sizing: border-box;}
+body {background-color: #EBEDEF;}
+.wrapper {background-color: white;}
+/*-------------------------MODULER----------------------------*/
+.navigation__link {
+	font-size: large; padding: 0em 0.5em;
+	color: black; font-family: myFont;
+}
+.searchbar__submit {
+	background-color: #112d4d; color: white; padding: 0.1em 0.1em;
+}
+.searchbar__textbox {padding: 0em 0.1em;}
+.searchbar__input {
+	padding: 0.5em 0em; padding-left: 0.1em; outline-color: transparent; outline-style: none;
+}
+.centered__content {position: absolute;}
+.section__heading {font-family: buttonmediaFont; text-align: center; color: white; font-size: clamp(1.7rem, 5vw, 5rem);}
+.section__paragraph {color: white; text-align: center; font-family: buttonmediaFont; font-size: 2.5rem;}
+.background_img_male {
+	background-image: url(images/joel-bengs-mA_lknGurfc-unsplash.webp);
+	background-size: cover; background-position: 100% 75%;
+}
+.background_img_female {
+	background-image: url(images/evan-krause-bfWJOx132As-unsplash.webp);
+	background-size: cover; background-position: 100% 94%;
+}
+.background_img_content {text-align: center;}
+.background_img_heading {font-family: buttonmediaFont; letter-spacing: 3px; font-size: 3.75rem; color: white; text-align: center;}
+.background_img_paragraph {font-family: buttonmediaFont; letter-spacing: 2px; text-align: center; color: white; font-size: 1.25rem;}
+.background_img_button_primary {
+	color: white; background-color: #163f6d;
+	border: 2px solid #163f6d; text-align: center;
+	padding: 1.1em 1.1em; margin-top: 1em;
+	font-family: buttonmediaFont; font-size: 1.125rem; margin-right: 0.5em;
+}
+.background_img_button_secondary {
+	color: white; background-color: transparent;
+	border: 2px solid white; text-align: center;
+	padding: 1.1em 1.1em; margin-top: 1em;
+	font-family: buttonmediaFont; font-size: 1.125rem; margin-right: 0.5em;
+}
+.products__section {padding-bottom: 3em;}
+.products__heading {
+	font-family: myFont; color: #163f6d;
+	font-size: 2.3rem; font-weight: 600; margin-left: 0.5em;
+}
+.scroll__container {
+	margin-top: 1em; background-color: #163f6d69;
+	overflow: auto; white-space: nowrap; padding: 3px 3px;
+}
+.product__link {cursor: pointer;}
+::-webkit-scrollbar {width: 1em;}
+::-webkit-scrollbar-track {background: #f1f1f1;}
+::-webkit-scrollbar-thumb {background: #8888887a;}
+.background_img_kids {
+	background-image: url(images/delightin-dee-TB81mmEk6v0-unsplash.webp);
+	background-size: cover; background-position: 100% 70%;
+}
+aside {
+	background-image: url(images/louis-hansel-7jpXutWZFDQ-unsplash.webp);
+	background-size: cover; background-position: 100% 100%;
+}
+.aside__section>h3 {
+	color: #112d4d; font-size: 1.6rem;
+	font-family: headingFont; text-align: center;
+}
+.ad__img {
+	border-radius: 0.5em; border: 3px solid #f7f7f7; cursor: pointer;
+}
+.video__logo {border-radius: 1em;height: 6em;}
+.vertical__line {border-left: 0.3em solid white; height: 6em;}
+.video__heading {
+	font-family: buttonmediaFont; color: white; font-size: 3rem;
+}
+footer {
+	display: block; background-color: #112d4d; padding: 1em 0.5em;
+}
+.footer__wrapper {padding: 1em 1em;}
+.footer__heading {
+	color: white; font-family: headingFont; font-size: 2.3rem;
+}
+.footer__button {
+	font-size: 1.5rem; font-family: buttonmediaFont; 
+	color: white; background-color: #5e8aab;
+	font-size: 1.5rem; padding: 0.5em 1em; border-radius: 0.5em;
+}
+.footer__img {border: 3px solid #0d213b; border-radius: 50%;}
+.footer__paragraph {
+	color: white; font-size: 1rem;
+	font-family: buttonmediaFont; text-align: center;
+}
+.footer__links {color: white; font-family: myFont;}
+.footer_link_paragraph {color: white; font-family: myFont;}
+/* Media Queries för moduler */
+@media only screen and (max-width: 980px) { /* For TABLETS */
+	.navigation__link {font-size:x-large;}
+	.online_shopping_icon {
+		-webkit-transform: scaleX(-1); transform: scaleX(-1);
+		margin-bottom: 1em; border-radius: 100%;
+	}
+	.footer__heading {margin-top: 1em; font-size: 1.8rem;}
+}
+@media only screen and (max-width: 500px) {
+	.navigation__link {font-size:larger;}
+	.section__paragraph { /* BACKGROUND VIDEO */font-size: 1rem;}
+	.aside__section>h3 { /* (Advertisement) */font-size: 1.3rem;}
+	.video__heading {font-size: 1.5rem;}
+}
+@media only screen and (max-width: 450px) { /* For Mobile (BIG) */
+	.navigation__link { /* Navigation */ font-size: medium;}
+	.section__heading {font-size: clamp(1.7rem, 5vw, 2rem);}
+	.section__paragraph { /* BACKGROUND VIDEO */ font-size: 1rem;}
+	.background_img_female { /* Heading background picture */ background-position: 50% top;}
+	.aside__section>h3 { /* (Advertisement) */ font-size: 1.3rem;}
+	.video__heading {font-size: 1.3rem;}
+}
+@media only screen and (max-width: 375px) { /* For Mobile (SMALL) */
+	nav {	/* Navigation / Menu */
+		padding-left: 0em; justify-content: center; margin-right: 1em;
+	}
+	.navigation__link {font-size:smaller;}
+	.aside__section>h3 { /* (Advertisement) */ font-size: 1.2rem;}
+	.video__heading {font-size: 1rem;}
+}
+/*-------------------------LAYOUT-----------------------------*/
+.wrapper {max-width: 1300px; margin: 0 auto;}
+header {
+	display: grid; grid-template-columns: repeat(2, 1fr);
+	width: 100%; height: 5.5rem;
+	grid-template-areas: 
+	'Navigation Logo Searchbar ShopIcon';
+}
+.navigation { grid-area: Navigation; }
+.logo__container { grid-area: Logo; }
+.searchbar__container { grid-area: Searchbar; margin-right: 1em; }
+.online_shopping_icon_container { grid-area: ShopIcon; }
+nav { display: flex; align-items: center; padding-left: 1em; height: 5.5em;}
+.logo { width: clamp(18em, 90%, 19em); margin-top: 0.1em;}
+.searchbar__form {display: flex; margin-top: 1.5em; border: 2px solid #112d4d;}
+.online_shopping_icon {height: 5em; margin-top: 0.2em;}
+.background_video_section { display: flex; align-items: center; justify-content: center; width: 100%; height: auto; padding-bottom: 2em;}
+.background_video_section video { object-fit: cover; width: 100%; height: minmax(100%, auto);}
+.assortments { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1em; margin: 0 auto; padding-top: 1em; padding-bottom: 3em;
+	width: 97%; height: auto; grid-template-areas: 'Surfing Sailing Beachvolley Swim'; 
+}
+.assortment__item1 {grid-area: Surfing; text-align: center; justify-content: center;}
+.assortment__item2 {grid-area: Sailing; text-align: center; justify-content: center;}
+.assortment__item3 {grid-area: Beachvolley; text-align: center; justify-content: center;}
+.assortment__item4 {grid-area: Swim; text-align: center; justify-content: center;}
+.image_link_img {width: 100%; height: auto;}
+.section_background_img { width: 100%; height: auto; padding-top: 2em; padding-bottom: 3em;}
+.background_img_male { display: flex; align-items: center; justify-content: center; width: 100%; height: 600px;}
+.background_img_female { display: flex; align-items: center; justify-content: center; width: 100%; height: 600px;}
+.background_img_kids { display: flex; align-items: center; justify-content: center; width: 100%; height: 700px;}
+aside { display: flex; justify-content: center; align-items: center; width: 100%; height: auto; padding: 5em 0em; margin-bottom: 3em;}
+.ad__img {height: 35em;}
+.center__display {display: flex; justify-content: center; align-items: center;}
+.vertical__line {display: inline-block; margin: 0em 1em;}
+.footer__wrapper {display: block; width: 100%;}
+.footer_section_one {display: flex; justify-content: space-around; align-items: center; flex-direction: row;}
+.footer_call_to_action {width: 100%;}
+.footer__heading {margin-bottom: 1em;}
+.footer_section_two {display: flex; align-items: flex-start; justify-content: space-between; margin-top: 3em;}
+.footer__logo {width: 100%; height: auto;}
+.footer_paragraph {margin-top: 1em;}
+.footer_links_container { display: flex; justify-content: space-between; width: 100%; max-width: 38em; padding-left: 2em;}
+.footer__links {display: block; margin-bottom: 1.5em;}
+.footer_link_paragraph {display: block; margin-bottom: 1.5em;}
+.social__icons {padding-right: 1em;}
+/* Media Queries för layout*/
+@media only screen and (max-width: 980px) { /* For TABLETS */
+	header { /* SIDHUVUD */
+		display: grid; grid-template-columns: repeat(4, 1fr); 
+		width: 100%; height: auto;
+		grid-template-areas: 
+		'. Logo Logo .'
+		'Navigation Navigation Navigation Navigation'
+		'. ShopIcon Searchbar .';
+	}
+	.logo__container { /* Logo */ padding-top: 0.5em; margin: 0 auto; width: 19em;}
+	nav { /* Navigation */ justify-content: center; align-items: center;}
+	.searchbar__form {margin-right: 0.5em;}
+	.section__heading {font-size: clamp(1.7rem, 3vw, 3rem);}
+	.section__paragraph { /* BACKGROUND VIDEO */ font-size: 2rem;}
+	.background_img_heading {font-size: 3rem;}
+	.background_img_paragraph {font-size: 1rem;}
+	.video__logo { /* BACKGROUND VIDEO SURFING */ height: 4em;}
+	.vertical__line { /* BACKGROUND VIDEO SURFING */ height: 4em;} 
+	.video__heading { /* BACKGROUND VIDEO SURFING */ font-size: 2rem;}
+	.section-one { /* FOOTER Sektion 1 / Rad 1 */ flex-direction: column-reverse;}
+	.footer_call_to_action {
+		display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+	}
+	.footer_section_two {  /* FOOTER Sektion 2 / Rad 2 */
+		flex-direction: column-reverse; justify-content: center; align-items: center; margin-top: 5em;
+	}
+    .footer_links_container {width: 100%; margin-bottom: 3em;}
+}
+@media only screen and (max-width: 500px) { /* For Mobile (BIG) */
+	nav { /* Navigation */ justify-content: center; align-items: center;}
+	.assortments { /* Sortiment */
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas: 
+		'Surfing Sailing'
+		'Beachvolley Swim';
+	}
+	.ad__img {height: 30em;}
+	.video__logo { /* BACKGROUND VIDEO SURFING */ height: 3em;}
+	.vertical__line {height: 3em;}
+	.partner__logo {height: 1em;}
+	.ad__img {height: 25em;}
+	.video__logo { /* BACKGROUND VIDEO SURFING */ height: 2.5em;}
+	.vertical__line { /* BACKGROUND VIDEO SURFING */ height: 2.5em;}
+	.footer__logo { /* Footer Sektion 2 / Rad 2 */ width: 100%; height: auto;}
+	.footer_links_container { /* Footer Sektion 2 / Rad 2 */ flex-direction: column; justify-content: center; align-items: center; text-align: center;width: 100%; margin-bottom: 3em;}
+}
+@media only screen and (max-width: 375px) { /* For Mobile (SMALL) */
+	nav {	/* Navigation / Menu */ padding-left: 0em; justify-content: center; margin-right: 1em;}
+	.searchbar__form { /* Searchbar */ width: 8.5em;}
+	.partner__logo {height: 0.7em;}
+	.ad__img {margin-left: 0.5em;height: 20em;}
+	.video__logo { /* BACKGROUND VIDEO SURFING */ height: 1.9em;}
+	.vertical__line { /* BACKGROUND VIDEO SURFING */ height: 1.9em;}
+}
+/*-------------------------STATE------------------------------*/
+/* Hover */
+.navigation__link:hover {border-bottom: 2px solid #112d4d;}
+.searchbar__submit:hover {background-color: #163f6d;}
+.image__link > .image_link_img:hover {border: 4px solid #EAECEE;}
+.background_img_button_primary:hover {border: 2px solid white;}
+.background_img_button_secondary:hover {border: 2px solid #a6d0ff;}
+::-webkit-scrollbar-thumb:hover {background: #55555570;}
+.ad__link > .ad__img:hover {border: 3px solid #d0d0d0;}
+.footer__button:hover {background-color: #5e8aab83;}
+.footer__links:hover {color: rgba(255, 255, 255, 0.83);}
+/* Active */
+.navigation__link:active {border-bottom: 2px solid #2b7ad4;}
+.image__link > .image_link_img:active {border: 4px solid #112d4d;}
+.ad__link > .ad__img:active {border: 3px solid #000000;}
+/* Link */
+.ad__link > .ad__img:link {border: 3px solid #112d4d;}
